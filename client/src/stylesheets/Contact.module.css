@@ -1,0 +1,138 @@
+
+.panel {
+    width: 100vw;
+    background-color: rgb(21, 0, 70);
+    margin-top:20vh;
+}
+
+.panel h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: clamp(1rem, 4vw + 2rem, 6rem);
+    font-weight: 500;
+    font-family: 'Archivo Black', sans-serif;
+    /*position: sticky;
+    top: 0;*/
+    padding-top: 30vh;
+}
+
+.container {
+    display:flex;
+    padding-left:10vw;
+    background-color: rgb(21, 0, 70);
+    overflow-y:hidden;
+}
+
+.graphic {
+    width: 40%;
+    padding:5rem 0;
+}
+
+.graphic img{
+    width:100%;
+}
+
+.contactForm {
+    width: 40%;
+    padding:5rem 0;
+}
+
+.contactForm form{
+    display:flex;
+    flex-direction: column;
+    padding-left:10%;
+}
+
+.contactForm label{
+    font-size: clamp(1rem, 1vw + 1rem, 6rem);
+    color:white;
+
+}
+
+.contactForm form input{
+    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    background-color: rgba(0,0,0,0);
+    color:white;
+    margin-bottom:3rem;
+    width:80%;
+    height:3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #FFF; /* You can adjust the color and thickness of the outline */
+}
+
+.contactForm form textarea{
+    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    color:white;
+    background-color: rgba(0,0,0,0);
+    width:80%;
+    border: none;
+    outline: none;
+    border: 1px solid #FFF; /* You can adjust the color and thickness of the outline */
+}
+
+.contactForm form button{
+    padding:0;
+    margin:0;
+    border: 0;
+    max-width:10rem;
+    background-color:rgba(255,255,255,0);
+    border:1px solid white;
+    margin-top:3rem;
+    color:white;
+    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    font-weight: 500;
+    font-family: 'Archivo Black', sans-serif;
+    height:5rem;
+    width:10rem;
+}
+
+
+.contactForm form button:hover{
+    background-color:#FFF;
+    color:black;
+}
+
+@media(max-width:800px) {
+    .panel{
+        margin-top:5vh;
+    }
+    .panel h1{
+        font-size: clamp(1rem, 2vw + 2rem, 6rem);
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        padding:0;
+        padding-bottom:10vh;
+    }
+    .graphic{
+        padding:0;
+    }
+    .graphic{
+        width:100%;
+        padding:0;
+    }
+    .contactForm{
+        width:100%;
+        padding:0;
+    }
+    .contactForm form{
+        padding:0;
+        align-items: center;
+    }
+    .contactForm label{
+        width:100%;
+        padding-left:20%;
+        text-align: left;
+    }
+    .contactForm form button{
+        align-self: flex-start;
+        margin-left:10%;
+        height:4rem;
+        width:8rem;
+    }
+
+}

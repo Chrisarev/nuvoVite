@@ -1,0 +1,222 @@
+.panel {
+
+    width: 100vw;
+    background-color: rgb(21, 0, 70);
+    overflow: hidden;
+    margin-top: 20vh;
+}
+
+.panel h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: clamp(1rem, 2vw + 2rem, 5rem);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    /*margin-top: 5rem;*/
+    margin-bottom:15vh;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.visualsHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+    padding:0;margin:0;
+    padding-bottom:20vh;
+}
+
+.visual {
+    /*width: 25rem;*/
+    width:25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity:0;
+
+}
+
+.mediaHolder {
+    width: 100%;
+    height:20rem;
+}
+
+.visual img {
+    max-width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+.visual h2 {
+    font-size: clamp(1rem, 1.5vw + 1rem, 5rem);
+    font-weight: 500;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    text-decoration: underline;
+}
+.visual p{
+    font-size: clamp(1rem, 0.6vw + 1rem, 5rem);
+    font-weight: 400;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.visual svg {
+    transform: rotate(-420deg)
+}
+
+svg {
+    transform-origin: center;
+}
+
+.circle {
+    transform-origin: center;
+}
+
+.circle:nth-of-type(1) {
+    transform-origin: center;
+    animation: circleRotate 5s infinite;
+    animation-delay: 0.7s;
+}
+
+.circle:nth-of-type(2) {
+    transform-origin: center;
+    animation: circleRotate2 5s infinite;
+    animation-delay: 1.4s;
+}
+
+.circle:nth-of-type(3) {
+    animation: circleRotate3 5s infinite;
+    animation-delay: 2.1s;
+}
+
+.circle:nth-of-type(4) {
+    animation: circleRotate4 5s infinite;
+    animation-delay: 2.8s;
+}
+
+/*
+.circle:nth-of-type(4){
+    animation: circleRotate 8s infinite;
+    animation-delay: 2.8s;
+}
+
+.circle:nth-of-type(5){
+    animation:circleRotate 8s infinite;
+    animation-delay: 3.5s;
+}
+.circle:nth-of-type(6){
+    animation: circleRotate2 8s infinite;
+    animation-delay: 4.2s;
+}
+.circle:nth-of-type(7){
+    animation: circleRotate3 8s infinite;
+    animation-delay: 4.9s;
+}
+.circle:nth-of-type(8){
+    animation:circleRotate 8s infinite;
+
+    animation-delay: 5.6s;
+}
+*/
+@keyframes circleRotate {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    15% {
+        /*transform: rotate(1080deg) translateY(-125px)translateX(-80px);*/
+        transform: rotate(0) translateY(90px)translateX(90px);
+    }
+
+    50% {
+        transform: rotate(0) translateY(90px)translateX(90px);
+    }
+
+    100% {
+        transform: rotate(720deg) translateY(0)translateX(0);
+    }
+}
+
+@keyframes circleRotate2 {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    15% {
+        /*transform: rotate(1080deg) translateY(-125px)translateX(-80px);*/
+        transform: rotate(0) translateY(-90px)translateX(-90px);
+    }
+
+    50% {
+        transform: rotate(0) translateY(-90px)translateX(-90px);
+    }
+
+    100% {
+        transform: rotate(720deg) translateY(0)translateX(0);
+    }
+}
+
+@keyframes circleRotate3 {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    15% {
+        /*transform: rotate(1080deg) translateY(-125px)translateX(-80px);*/
+        transform: rotate(0) translateY(90px)translateX(-90px);
+    }
+
+    50% {
+        transform: rotate(0) translateY(90px)translateX(-90px);
+    }
+
+    100% {
+        transform: rotate(720deg) translateY(0)translateX(0);
+    }
+}
+
+@keyframes circleRotate4 {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    15% {
+        /*transform: rotate(1080deg) translateY(-125px)translateX(-80px);*/
+        transform: rotate(0) translateY(-90px)translateX(90px);
+    }
+
+    50% {
+        transform: rotate(0) translateY(-90px)translateX(90px);
+    }
+
+    100% {
+        transform: rotate(720deg) translateY(0)translateX(0);
+    }
+}
+
+@media(max-width:800px) {
+    .panel{
+        margin-bottom:20vh;
+    }
+    .mediaHolder {
+        height: auto;
+    }
+
+    .visualsHolder {
+        width: 80%;
+        padding-left: 10vw;
+        gap: 6rem;
+    }
+
+    .visual {}
+
+    .panel h1 {
+        font-size: clamp(1rem, 3vw + 1rem, 5rem);
+    }
+}

@@ -28,8 +28,6 @@ const Contact = () => {
     //ex: if useTransform(scrollYProgress[0,0.5,1], [1,0.5,0]) then if scrollYProgress 
     //is 1(element is fully scrolled), then opacity would be set to 0 
     //once element is half way scrolled thru, opacity set to 0 
-    const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1])
-    const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1.1, 0.5])
     const translateY = useTransform(scrollYProgress, [0, 0.3, 1], [100, -125, -150])
     
     const handleSubmit = () =>{
@@ -53,7 +51,7 @@ const Contact = () => {
 
     return (
         <div ref={targetRef} className={styles.panel}>
-            <motion.h1 style={{translateY}}>Have an idea?</motion.h1>
+            <motion.h1 id="contactHeader" style={{translateY}}>Have an idea?</motion.h1>
             <div ref={ref} className={styles.container}>
                 <motion.div animate={animation} className={styles.graphic}>
                     <img src={desk} alt="" />
@@ -63,9 +61,9 @@ const Contact = () => {
                         <label htmlFor="name">Name:</label>
                         <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label htmlFor="message">Message:</label>
-                        <textarea name="" id="" cols="30" rows="8"></textarea>
+                        <textarea name="" id="" cols="30" rows="8" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         <button type="submit">Submit</button>
                     </form>
                 </motion.div>

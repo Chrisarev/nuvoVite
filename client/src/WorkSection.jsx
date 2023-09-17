@@ -46,10 +46,11 @@ const WorkSection = () => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
         }
-
-        if(windowDimensions.width < 800){
+        if(windowDimensions.width < 1800 && windowDimensions.width > 800){
+            setImageOffset(250)
+        } else if(windowDimensions.width < 800){
             setImageOffset(50)
-        }else{
+        }else {
             setImageOffset(400)
         }
 
@@ -65,7 +66,7 @@ const WorkSection = () => {
 
     return (
         <div className={styles.panel}>
-            <h1 id="worksTitle">Works</h1>
+            <h1 id="worksHeader">Works</h1>
             <Link to="https://www.google.com/" onMouseOver={() => handleHover(1)} onMouseOut={() => handleHoverEnd(0)} className={styles.workHolder}>
                 <div className={styles.content}>
                     <div
@@ -119,8 +120,6 @@ const WorkSection = () => {
             {imageShowIndex == 4 &&
                 <img className={styles.cursorIMG} style={imgStyle} src={yelpcamp}></img>
             }
-
-
         </div>
     )
 }

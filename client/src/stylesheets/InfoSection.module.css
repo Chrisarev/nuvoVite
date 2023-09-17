@@ -13,7 +13,6 @@
     font-size: clamp(1rem, 2vw + 2rem, 5rem);
     padding-left: 10vw;
     padding-right: 10vw;
-    /*margin-top: 5rem;*/
     margin-bottom:15vh;
     font-weight: 500;
     text-align: center;
@@ -31,13 +30,11 @@
 }
 
 .visual {
-    /*width: 25rem;*/
     width:25rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     opacity:0;
-
 }
 
 .mediaHolder {
@@ -56,7 +53,6 @@
     font-weight: 500;
     font-family: 'Archivo Black', sans-serif;
     color: white;
-    text-decoration: underline;
 }
 .visual p{
     font-size: clamp(1rem, 0.6vw + 1rem, 5rem);
@@ -100,30 +96,6 @@ svg {
     animation-delay: 2.8s;
 }
 
-/*
-.circle:nth-of-type(4){
-    animation: circleRotate 8s infinite;
-    animation-delay: 2.8s;
-}
-
-.circle:nth-of-type(5){
-    animation:circleRotate 8s infinite;
-    animation-delay: 3.5s;
-}
-.circle:nth-of-type(6){
-    animation: circleRotate2 8s infinite;
-    animation-delay: 4.2s;
-}
-.circle:nth-of-type(7){
-    animation: circleRotate3 8s infinite;
-    animation-delay: 4.9s;
-}
-.circle:nth-of-type(8){
-    animation:circleRotate 8s infinite;
-
-    animation-delay: 5.6s;
-}
-*/
 @keyframes circleRotate {
     0% {
         transform: rotate(0) translateY(0);
@@ -213,9 +185,6 @@ svg {
         padding-left: 10vw;
         gap: 6rem;
     }
-
-    .visual {}
-
     .panel h1 {
         font-size: clamp(1rem, 3vw + 1rem, 5rem);
     }

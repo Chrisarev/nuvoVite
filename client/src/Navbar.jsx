@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
             <div className={styles.links}>
                 <ul>
-                    <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#skillsHeader") }}><li>Skills</li></Link>
+                    <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#infoHeader") }}><li>Skills</li></Link>
                     <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#worksHeader") }}><li>Our Work</li></Link>
                     <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#contactHeader") }}><li>Contact</li></Link>
                 </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
                 {dropDownShowState &&
                     <div className={styles.dropDownItems}>
-                        <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#skillsHeader") }}><li>Skills</li></Link>
+                        <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#infoHeader") }}><li>Skills</li></Link>
                         <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#worksHeader") }}><li>Our Work</li></Link>
                         <Link onClick={(e) => { e.preventDefault(); window.location.replace("/#contactHeader") }}><li>Contact</li></Link>
                     </div>

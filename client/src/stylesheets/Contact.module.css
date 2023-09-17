@@ -60,7 +60,7 @@
     height:3rem;
     border: none;
     outline: none;
-    border-bottom: 1px solid #FFF; /* You can adjust the color and thickness of the outline */
+    border-bottom: 1px solid #FFF;
 }
 
 .contactForm form textarea{
@@ -70,7 +70,8 @@
     width:80%;
     border: none;
     outline: none;
-    border: 1px solid #FFF; /* You can adjust the color and thickness of the outline */
+    border: 1px solid #FFF; 
+    resize:none;
 }
 
 .contactForm form button{

@@ -1,33 +1,17 @@
 import styles from './stylesheets/InfoSection.module.css'
 import couch from './stylesheets/images/couch.png'
 import ui from './stylesheets/images/uiux.png'
-import { useScroll, useTransform, motion, useAnimation } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import {  motion, useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const InfoSection = () => {
     const { ref, inView } = useInView();
     const animation = useAnimation();
-    const animation2 = useAnimation();
-    const animation3 = useAnimation();
 
     useEffect(() => {
         if (inView) {
             animation.start({
-                y: 0,
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 1.2, bounce: 0.2, delay: 0.1
-                }
-            })
-            animation2.start({
-                y: 0,
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 1.2, bounce: 0.2, delay: 0.1
-                }
-            })
-            animation3.start({
                 y: 0,
                 opacity: 1,
                 transition: {
@@ -43,7 +27,7 @@ const InfoSection = () => {
 
     return (
         <div className={styles.panel}>
-            <h1 className={styles.infoHeader}>We are a multi-talented group of developers looking to push the web forward.</h1>
+            <h1 id="infoHeader" className={styles.infoHeader}>We are a multi-talented group of developers looking to push the web forward.</h1>
             <motion.div ref={ref} className={styles.visualsHolder}>
                 <motion.div animate={animation} className={styles.visual}>
                     <div className={styles.mediaHolder}>

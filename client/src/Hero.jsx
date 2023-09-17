@@ -11,9 +11,9 @@ const Hero = () => {
     const [loaded, setLoaded] = useState(false);
 
     const loadHelper = () => {
-        /*setTimeout(() =>{
+        setTimeout(() =>{
             setLoaded(true);
-        },2000)*/
+        },2000)
         setLoaded(true);
     }
 

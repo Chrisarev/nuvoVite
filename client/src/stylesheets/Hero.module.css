@@ -9,6 +9,7 @@
     background-color: rgb(21, 0, 70);
     overflow:hidden;
 }
+
 .loadingPanel{
     position:fixed;
     display:flex;
@@ -20,10 +21,6 @@
     background-color: rgb(21, 0, 70);
     justify-content: center;
     align-items: center;
-}
-
-.spline {
-
 }
 
 canvas {
@@ -46,19 +43,14 @@ canvas {
     text-align: right;
     z-index:2;
     color:white;
-    /*text-align: right;*/
     text-align:center;
-    /*margin-right:25vw;*/
     margin-right:30vw;
-    /*margin-top:35vh;*/
     margin-top:40vh;
     font-family: 'Bebas Neue', sans-serif;
-    /*font-size: clamp(1rem,5vw + 1rem, 8rem);*/
     font-size: clamp(1rem,7vw + 1rem, 10rem);
     font-weight:700;
 }
 .content img{
-    /*height:clamp(1rem,3vw + 1rem, 8rem);*/
     height:clamp(1rem,5vw + 1rem, 7rem);
     margin-right:1rem;
 
@@ -69,7 +61,6 @@ canvas {
     margin-top:3rem;
     color:white;
     text-align:center;
-    /*margin-right:25vw;*/
     margin-right:30vw;
     z-index:2;
     font-family: 'Montserrat', sans-serif;
@@ -118,9 +109,3 @@ canvas {
         transform: scale(0.4) translateX(15vw) translateY(40vh);
     }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@1,700&display=swap');

@@ -57,14 +57,19 @@
     background-color:rgba(255,255,255,0.5);
     position: absolute;
     right: 0;
-    padding-right: 1rem;
-    padding-left:1rem;
     list-style: none;
 }
 
 .dropDownItems a {
     color: white;
     text-align: center;
+}
+.dropDownItems li{
+    border:1px solid black;
+    padding-right: 1rem;
+    padding-left:1rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
 }
 
 @media(max-width:800px) {

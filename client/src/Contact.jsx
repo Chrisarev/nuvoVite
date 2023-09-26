@@ -2,13 +2,14 @@ import styles from './stylesheets/Contact.module.css'
 import { useScroll, useTransform, motion, useAnimation } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import desk from './stylesheets/images/desk.png'
-import {useInView} from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer'
 
 const Contact = () => {
     const [name, setName] = useState('');
-    const [email,setEmail] = useState('')
+    const [email, setEmail] = useState('')
     const [message, setMessage] = useState('');
-    const {ref, inView} = useInView();
+    const [submitted, setSubmitted] = useState(false);
+    const { ref, inView } = useInView();
     const animation = useAnimation();
 
     //Need the useRef hook to get position of parent element 
@@ -29,29 +30,31 @@ const Contact = () => {
     //is 1(element is fully scrolled), then opacity would be set to 0 
     //once element is half way scrolled thru, opacity set to 0 
     const translateY = useTransform(scrollYProgress, [0, 0.3, 1], [100, -125, -150])
-    
-    const handleSubmit = () =>{
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         console.log('submitted')
+        setSubmitted(true);
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         if (inView) {
             animation.start({
                 y: -70,
-                opacity:1,
+                opacity: 1,
                 transition: {
-                    type: 'spring', duration: 1.2, bounce: 0.2, delay:0.1
+                    type: 'spring', duration: 1.2, bounce: 0.2, delay: 0.1
                 }
             })
         }
         if (!inView) {
-            animation.start({ y: '15vh', opacity:0 })
+            animation.start({ y: '15vh', opacity: 0 })
         }
-    },[inView])
+    }, [inView])
 
     return (
         <div ref={targetRef} className={styles.panel}>
-            <motion.h1 id="contactHeader" style={{translateY}}>Have an idea?</motion.h1>
+            <motion.h1 id="contactHeader" style={{ translateY }}>{!submitted ? 'Have an idea?' : 'We will contact you shortly.' }</motion.h1>
             <div ref={ref} className={styles.container}>
                 <motion.div animate={animation} className={styles.graphic}>
                     <img src={desk} alt="" />
@@ -59,12 +62,17 @@ const Contact = () => {
                 <motion.div animate={animation} className={styles.contactForm}>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="name">Name:</label>
-                        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
+                        <input required disabled={submitted} type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
                         <label htmlFor="email">Email:</label>
-                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input required disabled={submitted} type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label htmlFor="message">Message:</label>
-                        <textarea name="" id="" cols="30" rows="8" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                        <button type="submit">Submit</button>
+                        <textarea required disabled={submitted} name="" id="" cols="30" rows="8" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                        {!submitted &&
+                            <button type="submit">Submit</button>
+                        }
+                        {submitted &&
+                            <button className={styles.submittedButton}disabled>✓</button>
+                        }
                     </form>
                 </motion.div>
             </div>

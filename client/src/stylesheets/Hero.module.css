@@ -11,7 +11,7 @@
 }
 
 .loadingPanel{
-    position:fixed;
+    position:absolute;
     display:flex;
     width:100%;
     height:100%;
@@ -21,12 +21,20 @@
     background-color: rgb(21, 0, 70);
     justify-content: center;
     align-items: center;
+    color:white;
+    overflow:hidden;
+}
+
+.no-scroll{
+    overflow:hidden;
 }
 
 canvas {
     transform:scale(0.9) translateX(25vw);
 }
-
+canvas:active {
+	pointer-events: none;
+}
 .content{
     display:flex;
     flex-direction: column;

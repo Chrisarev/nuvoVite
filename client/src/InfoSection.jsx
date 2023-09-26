@@ -27,7 +27,7 @@ const InfoSection = () => {
 
     return (
         <div className={styles.panel}>
-            <h1 id="infoHeader" className={styles.infoHeader}>We are a multi-talented group of developers looking to push the web forward.</h1>
+            <motion.h1 animate={animation}id="infoHeader" className={styles.infoHeader}>We are a multi-talented group of developers looking to push the web forward.</motion.h1>
             <motion.div ref={ref} className={styles.visualsHolder}>
                 <motion.div animate={animation} className={styles.visual}>
                     <div className={styles.mediaHolder}>

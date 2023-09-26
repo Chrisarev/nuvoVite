@@ -9,12 +9,16 @@ import nuvo from './stylesheets/images/nuvo.png'
 
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
+    //prevent website from being scrollable until asset loaded
+    useEffect(() =>{
+        document.body.style.overflowY = "hidden";
+    },[])
 
     const loadHelper = () => {
         setTimeout(() =>{
+            document.body.style.overflowY = "scroll"
             setLoaded(true);
         },2000)
-        setLoaded(true);
     }
 
     return (
@@ -34,7 +38,7 @@ const Hero = () => {
                     <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.9, duration: 0.5 }}>Whatever you can envision, we can create.</motion.p>
                 </div>
                 <div className={styles.wrapper}>
-                    <Spline onLoad={() => loadHelper()} className={styles.spline} scene="https://prod.spline.design/tGzMYEwm78FnA3rP/scene.splinecode" />
+                    <Spline onLoad={loadHelper()} className={styles.spline} scene="https://prod.spline.design/tGzMYEwm78FnA3rP/scene.splinecode" />
                 </div>
             </div>
         </>

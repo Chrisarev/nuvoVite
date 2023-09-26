@@ -90,10 +90,13 @@
     width:10rem;
 }
 
-
 .contactForm form button:hover{
     background-color:#FFF;
     color:black;
+}
+
+.submittedButton{
+    pointer-events: none;
 }
 
 @media(max-width:800px) {

@@ -53,14 +53,12 @@ const WorkSection = () => {
         }else {
             setImageOffset(400)
         }
-
+        
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('mousemove',handleMouseMove)
             window.removeEventListener('resize', handleResize);
-
         }
     }, []);
 

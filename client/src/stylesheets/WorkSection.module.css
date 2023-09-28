@@ -9,14 +9,15 @@
 .panel h1 {
     color: white;
     margin-left: 6vw;
-    font-size: clamp(1rem, 4vw + 2rem, 6rem);
+    /*font-size: clamp(1rem, 4vw + 2rem, 6rem);*/
+    font-size: clamp(1rem, 2vw + 2rem, 5rem);
     font-weight: 500;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .workHolder {
     width: 100vw;
-    height: 20vh;
+    height: 15rem;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
@@ -46,14 +47,14 @@
 
 .workHolder:hover>.content,
 .workHolder:hover>.inverse {
-    transform: translateY(-20vh);
+    transform: translateY(-15rem);
 }
 
 .number {
     max-height: 40%;
     text-align: right;
     margin-right: 6vw;
-    font-size: clamp(1rem, 3vw + 2rem, 4rem);
+    font-size: clamp(1rem, 2vw + 1.5rem, 5rem);
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -61,7 +62,7 @@
 .projectTitle {
     max-height: 60%;
     margin-left: 6vw;
-    font-size: clamp(1rem, 4vw + 2rem, 6rem);
+    font-size: clamp(1rem, 2vw + 2rem, 5rem);
     font-family: 'Montserrat', sans-serif;
     margin-top: auto;
 }

@@ -55,11 +55,11 @@ canvas:active {
     margin-right:30vw;
     margin-top:40vh;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1rem,7vw + 1rem, 10rem);
+    font-size: clamp(1rem,5vw + 1rem, 8rem);
     font-weight:700;
 }
 .content img{
-    height:clamp(1rem,5vw + 1rem, 7rem);
+    height:clamp(1rem,3vw + 1rem, 7rem);
     margin-right:1rem;
 
 }

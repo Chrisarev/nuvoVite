@@ -2,7 +2,7 @@
 .panel {
     width: 100vw;
     background-color: rgb(21, 0, 70);
-    margin-top:20vh;
+    margin-top:15vh;
 }
 
 .panel h1 {
@@ -10,12 +10,13 @@
     padding: 0;
     color: white;
     text-align: center;
-    font-size: clamp(1rem, 4vw + 2rem, 6rem);
+    font-size: clamp(1rem, 2vw + 2rem, 6rem);
     font-weight: 500;
     font-family: 'Archivo Black', sans-serif;
     /*position: sticky;
     top: 0;*/
     padding-top: 30vh;
+
 }
 
 .container {
@@ -46,13 +47,13 @@
 }
 
 .contactForm label{
-    font-size: clamp(1rem, 1vw + 1rem, 6rem);
+    font-size: clamp(1rem, 0.6vw + 1rem, 6rem);
     color:white;
 
 }
 
 .contactForm form input{
-    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    font-size: clamp(1rem, 0.4vw + 1rem, 5rem);
     background-color: rgba(0,0,0,0);
     color:white;
     margin-bottom:3rem;
@@ -64,7 +65,7 @@
 }
 
 .contactForm form textarea{
-    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    font-size: clamp(1rem, 0.4vw + 1rem, 5rem);
     color:white;
     background-color: rgba(0,0,0,0);
     width:80%;
@@ -83,11 +84,11 @@
     border:1px solid white;
     margin-top:3rem;
     color:white;
-    font-size: clamp(1rem, 0.7vw + 1rem, 5rem);
+    font-size: clamp(1rem, 0.4vw + 1rem, 5rem);
     font-weight: 500;
     font-family: 'Archivo Black', sans-serif;
-    height:5rem;
-    width:10rem;
+    height:4rem;
+    width:8rem;
 }
 
 .contactForm form button:hover{

@@ -66,7 +66,7 @@ const Contact = () => {
                         <label htmlFor="email">Email:</label>
                         <input required disabled={submitted} type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label htmlFor="message">Message:</label>
-                        <textarea required disabled={submitted} name="" id="" cols="30" rows="8" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                        <textarea required disabled={submitted} name="" id="" cols="30" rows="5" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         {!submitted &&
                             <button type="submit">Submit</button>
                         }
